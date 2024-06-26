@@ -1,0 +1,123 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("naruto5.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  height: 400px;
+  width: 400px;
+  border: 1px solid rgb(16, 130, 29);
+  backdrop-filter: blur(3px);
+  background: transparent;
+  padding: 30px;
+  border-radius: 15px;
+  overflow: auto;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 40px;
+  font-size: xx-larger;
+  color: rgb(19, 10, 2);
+  text-decoration: underline;
+}
+
+.input_container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.To-Do-List {
+  height: auto;
+  display: flex;
+  flex: 1;
+  padding-left: 110px;
+  background-color: transparent;
+  color: rgb(72, 44, 6);
+  font-size: 16px;
+  border-radius: 25px;
+  border: 2px solid rgb(161, 82, 22);
+  margin-right: 10px;
+  text-transform: uppercase;
+}
+
+.To-Do-List::placeholder {
+  color: rgb(75, 54, 8);
+}
+
+.button {
+  outline: none;
+  border: none;
+  background-color: rgba(234, 233, 228, 0.806);
+  color: rgb(10, 13, 15);
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 60px;
+  height: 50px;
+  width: 50px;
+}
+
+.todos li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  color: rgb(13, 12, 10);
+  font-size: large;
+  text-transform: capitalize;
+  overflow: auto;
+}
+
+.todos li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url("unchecked.png");
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+  position: absolute;
+}
+.todos li.checked {
+  color: rgb(23, 21, 18);
+  text-decoration: line-through;
+}
+
+.todos li.checked::before {
+  background-image: url("checked.png");
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #fdfbfb;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+ul li span:hover {
+  background-color: white;
+  color: black;
+}
